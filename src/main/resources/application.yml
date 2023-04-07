@@ -1,0 +1,22 @@
+server:
+  port: ${TOMCAT_PORT:8080}
+
+
+
+spring:
+  liquibase:
+    enabled: false
+  datasource:
+    username: srv.ecphd
+
+    password: ^iF@dk)WGf9q@D19
+    url: "jdbc:postgresql://dwh-gp-master01:5432/ckdata"
+
+
+  jpa:
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+
+
