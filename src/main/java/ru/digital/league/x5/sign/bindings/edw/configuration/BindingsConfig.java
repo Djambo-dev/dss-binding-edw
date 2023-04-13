@@ -2,17 +2,17 @@ package ru.digital.league.x5.sign.bindings.edw.configuration;
 
 import feign.Logger;
 import feign.auth.BasicAuthRequestInterceptor;
-import lombok.Value;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class BindingsConfig {
 
-    @Value("${sap-pi-basic-login}")
+    @Value("dd")
     private String login;
 
-    @Value("${sap-pi-basic-password}")
+    @Value("123")
     private String password;
 
     @Bean

@@ -1,7 +1,7 @@
 package ru.digital.league.x5.sign.bindings.edw.processor;
 
 
-import com.google.gson.Gson;
+
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import lombok.extern.slf4j.Slf4j;
@@ -20,12 +20,12 @@ import java.util.List;
 public class RawEntitiesUploadProcessor {
     RawEntityRepository rawEntityRepository;
     Bindings bindings;
-    Gson gson = new Gson();
+
     public void process(){
         List<RawEntities> rawEntities = rawEntityRepository.findAll();
 
         for (RawEntities rawEntity : rawEntities) {
-            bindings.sendData(gson.toJson(Mapper.convertEntityToDto(rawEntity)));
+            bindings.sendData(rawEntity);
         }
 
     }

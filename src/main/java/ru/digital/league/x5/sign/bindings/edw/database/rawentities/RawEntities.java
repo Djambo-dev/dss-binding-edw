@@ -22,21 +22,21 @@ public class RawEntities {
     @EmbeddedId
     RawEntitiesId id;
     @Column
-    String tm_personnel_no;
+    String tmPersonnelNo;
     @Column
-    String tm_full_nm;
+    String tmFullNm;
 
     @Column
-    String tm_ad_login_txt;
+    String tmAdLoginTxt;
 
     @Column
-    String um_personal_no;
+    String umPersonalNo;
 
     @Column
-    String um_full_nm;
+    String umFullNm;
 
     @Column
-    String um_ad_login_txt;
+    String umAdLoginTxt;
 
 
     @Embeddable
@@ -47,10 +47,10 @@ public class RawEntities {
     public static class RawEntitiesId implements Serializable {
 
         @Column(nullable = false)
-        String cost_point_id;
+        String costPointId;
 
         @Column(nullable = false)
-        String store_id;
+        String storeId;
 
     }
 
